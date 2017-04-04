@@ -10,7 +10,7 @@ from flask import render_template, request, redirect, url_for, jsonify
 from bs4 import BeautifulSoup
 import requests
 import urlparse
-from image_getter import *
+from image_getter import get_thumbs
 ###
 # Routing for your application.
 ###
@@ -22,7 +22,7 @@ def home():
     
 @app.route('/api/thumbnails')
 def thumbnails():
-    thumbnail = {"error": "Null", "Messages":"Success","Thumbnails": get_thumbs()}
+    thumbnail = {"error": "null", "Messages":"Success","Thumbnails": get_thumbs()}
     
     return jsonify(thumbnail)
 

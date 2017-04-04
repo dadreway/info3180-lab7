@@ -3,8 +3,8 @@
 
 var app = angular.module('thumbs',[]);
 
-app.controller( 'thumbnailcontroller', function($scope, $http){
+app.controller( 'myController', function($scope, $http){
 	$http.get('/api/thumbnails').then(function(response){
-	$scope.images = response.data["thumbnails"];
+	$scope.images = response.data["Thumbnails"];
 	});
 });

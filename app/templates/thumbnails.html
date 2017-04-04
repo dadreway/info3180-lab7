@@ -4,16 +4,17 @@
 {% block main %}
 
 <h1>View Images</h1>
-{% raw %}
-<div ng-app="thumbs" ng-controlller="thumbnailcontroller">
+<br>
+<br>
+<br>
+<div ng-app="thumbs" ng-controller="myController">
 	
-	<div ng-repeat="img in images">
-		<img src="{{ img }}" />
+	<div ng-repeat="image in images track by $index">
+		<img src="{{'{{ image }}'}}" />
 	</div>
-
 </div>
 
-{% endraw %}
+
 
 {% endblock %}
 
