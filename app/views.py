@@ -29,7 +29,7 @@ def thumbnails():
 
 @app.route('/thumbnails/view')
 def thmubnails_frontend():
-    return render_template('thumbnails.html')
+    return render_template('thumbnail.html')
 ###
 # The functions below should be applicable to all Flask apps.
 ###
