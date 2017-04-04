@@ -28,5 +28,5 @@ for img in soup.findAll("img", src=True):
 def get_thumbs():
     thumbs = []
     for img in soup.findAll("img", src=True):
-        thumbs.append(img["src"])
+        thumbs.append(img["src"]+"\n")
     return thumbs

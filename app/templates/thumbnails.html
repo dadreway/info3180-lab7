@@ -1,0 +1,23 @@
+
+{% extends "base.html" %}
+
+{% block main %}
+
+<h1>View Images</h1>
+{% raw %}
+<div ng-app="thumbs" ng-controlller="thumbnailcontroller">
+	
+	<div ng-repeat="img in images">
+		<img src="{{ img }}" />
+	</div>
+
+</div>
+
+{% endraw %}
+
+{% endblock %}
+
+{% block js %}
+<script src="/static/js/angular.min.js"></script>
+<script src="/static/js/app.js"></script>
+{% endblock %}
